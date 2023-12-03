@@ -32,7 +32,7 @@ const Hero = () => {
                     <h1 className='text-xl sm:text-3xl md:text-4xl pb-2 text-slate-100 font-semibold fontHero tracking-wider'>Najprostszy sposób na znalezienie </h1>
                     <h1 className='text-xl sm:text-3xl md:text-4xl pb-6 text-slate-100 font-semibold fontHero tracking-wider'>wymarzonego domu</h1>
                     <div className='flex gap-4'>
-                        <input 
+                        <input
                             placeholder='Gdzie mamy szukać?'
                             className='w-full text-sm sm:text-lg md:text-xl px-6 py-3 rounded-lg'/>
                         <Button label='Szukaj' click={() => {}}/>
