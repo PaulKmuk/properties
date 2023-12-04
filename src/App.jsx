@@ -15,6 +15,9 @@ return (
             <Route path="/kontakt" element={<Contact />}/>
          </Routes>
          <Footer />
+         <Footer />
+         <Footer />
+         <Footer />
       </div>
    )
 }
