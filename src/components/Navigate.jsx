@@ -22,8 +22,8 @@ const Navigate = () => {
     }
 
     return (
-        <div className='fixed z-10 top-8 w-full text-gray-300 px-2 md:px-10'>
-            <div className='flex max-w-[1300px] bg-teal-900 mx-auto items-center relative rounded-2xl max-md:py-4 px-6'>
+        <div className='fixed z-10 top-8 w-full text-gray-300 px-2 '>
+            <div className='flex max-w-[1400px] bg-teal-900 mx-auto items-center relative rounded-2xl max-md:py-4 px-6'>
 
                 {/* ---- Logo Icon ---- */}
                 <a href='/' className="flex items-end cursor-pointer text-slate-100">

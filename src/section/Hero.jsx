@@ -19,7 +19,7 @@ const Hero = () => {
         const interval = setInterval(() => {
             setCurrentImage(images[i]);
             i = (i + 1) % images.length;
-        }, 4000);
+        }, 4500);
         return () => clearInterval(interval);
     }, []);
 
@@ -35,14 +35,14 @@ const Hero = () => {
                 >
                     <img
                         src={image}
-                        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${currentImage === image ? 'z-10 opacity-100' : 'opacity-0 z-0'}`}
+                        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${currentImage === image ? 'z-10 opacity-100 slide-in-fwd-center' : 'opacity-80 z-0'}`}
                     />
                 </div>
             ))}
 
             <div className='w-full h-full bg-black/60 flex justify-center items-center relative z-20'>
                 
-                <div className=' max-w-[700px] px-3 z-20'>
+                <div className=' max-w-[700px] px-3 z-20 slide-in-bottom'>
                     <h1 className='text-xl sm:text-3xl md:text-4xl pb-2 text-slate-100 font-semibold fontHero tracking-wider'>Najprostszy sposób na znalezienie </h1>
                     <h1 className='text-xl sm:text-3xl md:text-4xl pb-6 text-slate-100 font-semibold fontHero tracking-wider'>wymarzonego domu</h1>
                     <div className='flex gap-4'>

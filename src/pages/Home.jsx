@@ -1,11 +1,12 @@
 import React from 'react'
-import { Hero } from '../section'
+import { Hero, PopularProperties } from '../section'
 
 const Home = () => {
 
     return (
         <>
             <Hero />
+            <PopularProperties />
         </>
     )
 }
