@@ -1,5 +1,5 @@
 import React from 'react'
-import { Hero, PopularProperties } from '../section'
+import { Hero, PopularProperties, PropertiesOffer } from '../section'
 
 const Home = () => {
 
@@ -7,6 +7,7 @@ const Home = () => {
         <>
             <Hero />
             <PopularProperties />
+            <PropertiesOffer />
         </>
     )
 }

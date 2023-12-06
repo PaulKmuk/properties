@@ -12,7 +12,7 @@ const SampleNextArrow = (props) => {
     const { style, onClick } = props;
     return (
         <div
-            className='cursor-pointer text-3xl text-teal-900'
+            className='cursor-pointer text-lg md:text-3xl text-teal-900'
             style={{ ...style, display: "flex"}}
             onClick={onClick}
         >
@@ -24,7 +24,7 @@ const SamplePrevArrow = (props) => {
     const { style, onClick } = props;
     return (
         <div
-            className='cursor-pointer text-3xl text-teal-900'
+            className='cursor-pointer text-lg md:text-3xl text-teal-900'
             style={{ ...style, display: "flex" }}
             onClick={onClick}
         >
@@ -41,6 +41,7 @@ const PopularProperties = () => {
         dots: true,
         infinite: true,
         speed: 1000,
+        autoplaySpeed: 4000,
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
@@ -69,7 +70,7 @@ const PopularProperties = () => {
         ]
     }
 
-    const classIconLayout = 'flex items-center gap-2'
+    const classIconLayout = 'flex items-center gap-2 text-sm md:text-md'
 
     return (
         <section className='bg-slate-100 text-slate-800'>
@@ -90,11 +91,11 @@ const PopularProperties = () => {
                                     <h2 className='text-3xl fontPrice underline pb-4'>{el.priceSell.toLocaleString('pl')} PLN</h2>
                                     <p>{el.adress}</p>
                                     <p className='font-bold text-black'>{el.region}, {el.city}</p>
-                                    <div className='flex gap-6 text-sm sm:text-md'>
-                                        <p className={classIconLayout}><FaBed className='text-xl'/> {el.layout.room}</p>
-                                        <p className={classIconLayout}><FaBath className='text-xl'/> {el.layout.bathroom}</p>
-                                        <p className={classIconLayout}><MdGarage className='text-xl'/> {el.layout.garage ? 'tak' : 'nie'}</p>
-                                        <p className={classIconLayout}><FaRulerCombined className='text-xl'/> {el.area} m<sup>2</sup></p>
+                                    <div className='flex gap-2 md:gap-6 text-sm sm:text-md flex-wrap py-2'>
+                                        <p className={classIconLayout}><FaBed className='text-md md:text-xl'/> {el.layout.room}</p>
+                                        <p className={classIconLayout}><FaBath className='text-md md:text-xl'/> {el.layout.bathroom}</p>
+                                        <p className={classIconLayout}><MdGarage className='text-md md:text-xl'/> {el.layout.garage ? 'tak' : 'nie'}</p>
+                                        <p className={classIconLayout}><FaRulerCombined className='text-sm md:text-xl'/> {el.area} m<sup>2</sup></p>
                                     </div>
                                     <div className='flex justify-end pt-6'>
                                         <Button label='Zobacz' className='md:!py-1 md:!px-3 md:!text-sm'/>

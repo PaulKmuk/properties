@@ -1,3 +1,6 @@
+import { FaHome, FaCity, FaBed, FaSwimmingPool, FaBuilding } from 'react-icons/fa'
+import { GiGreenhouse, GiHouse } from 'react-icons/gi'
+
 import { 
     house1, 
     house2, 
@@ -337,5 +340,48 @@ export const properties = [
         typeOffer: 'Sprzedaż',
         pathImg: house15,
         images: [ house15, room1, room2 ]
+    },
+]
+
+export const serviceOffer = [
+    {
+        icon: FaHome,
+        title: 'Dom jednorodzinny w zielonej okolicy',
+        description: 'Przestronny dom z pięknym ogrodem, idealny dla rodzin.',
+    },
+    {
+        icon: FaCity,
+        title: 'Apartament w centrum miasta',
+        description: 'Nowoczesny apartament z panoramicznym widokiem.',
+        },
+    {
+        icon: FaBed,
+        title: 'Luksusowe mieszkanie z 3 sypialniami',
+        description: 'Eleganckie mieszkanie z wieloma udogodnieniami.',
+    },
+    {
+        icon: FaSwimmingPool,
+        title: 'Dom na przedmieściach z basenem',
+        description: 'Przestronny dom z basenem, idealny na letnie dni.',
+    },
+    {
+        icon: GiGreenhouse,
+        title: 'Apartament z tarasem w nowej zabudowie',
+        description: 'Nowoczesny apartament z dużym tarasem i widokiem na miasto.',
+    },
+    {
+        icon: FaHome,
+        title: 'Mieszkanie z panoramicznym oknem',
+        description: 'Komfortowe mieszkanie z dużym panoramicznym oknem.',
+    },
+    {
+        icon: GiHouse,
+        title: 'Dom w cichej okolicy z dużym ogrodem',
+        description: 'Dom otoczony zielenią, idealny dla miłośników spokoju.',
+    },
+    {
+        icon: FaBuilding,
+        title: 'Nowoczesne mieszkanie w apartamentowcu',
+        description: 'Mieszkanie z nowoczesnymi udogodnieniami i dużym lobby.',
     },
 ]
