@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { navLinks } from '../data/data'
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -9,6 +9,23 @@ const Navigate = () => {
 
     const [ links, setLinks ] = useState(navLinks)
     const [ openMenu, setOpenMenu ] = useState(false)
+    const [ scrollY, setScrollY ] = useState(0)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentPosition = window.scrollY
+            setScrollY(currentPosition)
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    },[])
+
+    const setTopNavigation = () => {
+        return scrollY >= 100 ? 'top-2' : 'top-8'
+    }
+
 
     const openSubMenu = (id) => {
         let changeElement = links.find(el => id === el.id)
@@ -22,17 +39,17 @@ const Navigate = () => {
     }
 
     return (
-        <div className='fixed z-10 top-8 w-full text-gray-300 px-2 '>
+        <div className={`fixed z-10 ${setTopNavigation()} w-full text-gray-300 px-2`}>
             <div className='flex max-w-[1400px] bg-teal-900 mx-auto items-center relative rounded-2xl max-md:py-4 px-6'>
 
                 {/* ---- Logo Icon ---- */}
-                <a href='/' className="flex items-end cursor-pointer text-slate-100">
+                <a href='/' className="flex items-end cursor-pointer text-slate-100 scale-in-center">
                     <h1 className="text-xl sm:text-2xl md:text-4xl font-bold fontLogo">properties</h1>
                     <div className="w-4 h-4 bg-yellow-500 rounded-full mb-1 ml-1"></div>
                 </a>
 
                 {/* ---- Navigation ---- */}
-                <div className='ml-auto gap-4 hidden md:flex'>
+                <div className='ml-auto gap-4 hidden md:flex scale-in-center'>
                     {links.map(el => (
                         <div
                             className='relative group h-full py-5'
@@ -64,12 +81,12 @@ const Navigate = () => {
                 {/* ---- Burger Icon ---- */}
                 <GiHamburgerMenu
                     onClick={() => setOpenMenu(true)}
-                    className='text-2xl md:hidden ml-auto'/>
+                    className='text-2xl md:hidden ml-auto scale-in-center'/>
 
 
                 {/* ---- Menu To Small Device ---- */}
                 {openMenu && (
-                    <div className='fixed h-screen w-full min-[300px]:w-[300px] top-0 right-0 bg-slate-100 z-50 text-black slide-in-right'>
+                    <div className='fixed h-screen w-full min-[300px]:w-[300px] top-0 right-0 bg-slate-100 z-50 text-black slide-in-bottom'>
 
                         {/* ---- Close Menu Icon ---- */}
                         <div 

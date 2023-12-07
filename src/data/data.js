@@ -1,5 +1,8 @@
-import { FaHome, FaCity, FaBed, FaSwimmingPool, FaBuilding } from 'react-icons/fa'
+import { FaHome, FaCity, FaBed, FaSwimmingPool, FaBuilding, FaUser } from 'react-icons/fa'
 import { GiGreenhouse, GiHouse } from 'react-icons/gi'
+import { MdSecurity } from "react-icons/md";
+
+import { human1, human2, human3, human4, human5, human6 } from '../assets/human'
 
 import { 
     house1, 
@@ -385,3 +388,67 @@ export const serviceOffer = [
         description: 'Mieszkanie z nowoczesnymi udogodnieniami i dużym lobby.',
     },
 ]
+
+export const customerOpinion = [
+    {
+        name: 'Anna Kowalska',
+        description: 'Bardzo polecam to biuro! Profesjonalna obsługa, szybka i skuteczna pomoc w znalezieniu wymarzonego mieszkania.',
+        imagePath: human1
+    },
+    {
+        name: 'Jan Nowak',
+        description: 'Z ogromną przyjemnością współpracowałem z tą firmą. Znalezienie idealnego lokalu nie było tak proste jak tutaj!',
+        imagePath: human3
+    },
+    {
+        name: 'Katarzyna Wiśniewska',
+        description: 'Profesjonalizm, elastyczność i pełen entuzjazm do pracy. Gorąco polecam to biuro nieruchomości.',
+        imagePath: human2
+    },
+    {
+        name: 'Krzysztof Zielińska',
+        description: 'Bardzo polecam to biuro! Profesjonalna obsługa, szybka i skuteczna pomoc w znalezieniu wymarzonego mieszkania.',
+        imagePath: human4
+    },
+]
+
+export const sectionText = {
+    title: "Znajdź dom idealny dla Ciebie",
+    description: 'Szukasz wymarzonego domu? Bez względu na to, czy pragniesz cichej willi na obrzeżach miasta, przytulnego apartamentu w centrum czy domu z ogrodem dla swojej rodziny - jesteśmy tu, by pomóc Ci znaleźć właściwą nieruchomość.',
+    imagePath: house9,
+    subpoints: [
+        {
+            title: 'Nieruchomości',
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt optio minus',
+            icon: FaHome,
+        },
+        {
+            title: 'Nasi agenci',
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt optio minus',
+            icon: FaUser,
+        },
+        {
+            title: 'Bezpieczeństwo',
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt optio minus',
+            icon: MdSecurity,
+        },
+    ],
+    statistics: [
+        {
+            count: 538,
+            label: '# kupionychNieruchomości'
+        },
+        {
+            count: 281,
+            label: '#sprzedanychNieruchomości'
+        },
+        {
+            count: 293,
+            label: '#wszystkieNieruchomości'
+        },
+        {
+            count: 342,
+            label: '#wszyscyAgenci'
+        },
+    ]
+}
