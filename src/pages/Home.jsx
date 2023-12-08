@@ -1,5 +1,5 @@
 import React from 'react'
-import { Hero, PopularProperties, PropertiesOffer, CustomerOpinion, PropertiesInformation } from '../section'
+import { Hero, PopularProperties, PropertiesOffer, CustomerOpinion, PropertiesInformation, OurAgents } from '../section'
 
 const Home = () => {
 
@@ -10,6 +10,7 @@ const Home = () => {
             <PropertiesOffer />
             <CustomerOpinion />
             <PropertiesInformation />
+            <OurAgents />
         </>
     )
 }

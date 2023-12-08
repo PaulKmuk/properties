@@ -1,35 +1,35 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { sectionText } from '../data/data'
-import { useInView } from 'react-intersection-observer';
+// import { useInView } from 'react-intersection-observer';
 
 const PropertiesInformation = () => {
 
-    const [count, setCount] = useState(0);
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.5,
-    });
+    // const [count, setCount] = useState(0);
+    // const [ref, inView] = useInView({
+    //     triggerOnce: true,
+    //     threshold: 0.5,
+    // });
 
     
-    useEffect(() => {
-        let interval;
-        if (inView && count < sectionText.statistics[0].count) {
-            interval = setInterval(() => {
-                setCount(prevCount => prevCount + 1);
-            }, 2);
-        }
+    // useEffect(() => {
+    //     let interval;
+    //     if (inView && count < sectionText.statistics[0].count) {
+    //         interval = setInterval(() => {
+    //             setCount(prevCount => prevCount + 1);
+    //         }, 2);
+    //     }
     
-        if (count === sectionText.statistics[0].count) {
-            clearInterval(interval);
-        }
+    //     if (count === sectionText.statistics[0].count) {
+    //         clearInterval(interval);
+    //     }
     
-        return () => {
-            clearInterval(interval);
-        };
-    }, [inView, count]);
+    //     return () => {
+    //         clearInterval(interval);
+    //     };
+    // }, [inView, count]);
 
     return (
-        <div className='bg-slate-200 text-slate-800' ref={ref}>
+        <div className='bg-slate-200 text-slate-800'>
             <div className='max-w-[1400px] mx-auto px-4 py-10 md:py-20'>
                 <h2 className='max-w-[650px] text-center mx-auto text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold fontHero py-8 md:py-10'>{sectionText.title}</h2>
                 <p className='max-w-[650px] text-center mx-auto text-sm md:text-lg lg:text-xl py-2 md:py-4'>{sectionText.description}</p>
@@ -60,7 +60,7 @@ const PropertiesInformation = () => {
                             key={index}
                             className='slide-in-bottom text-center py-4'
                         >
-                            <p className='text-4xl md:text-6xl fontPrice tracking-wide'>{count}</p>
+                            <p className='text-4xl md:text-6xl fontPrice tracking-wide'>{el.count}</p>
                             <p className='text-sm lg:text-lg text-slate-600'>{el.label}</p>
                         </div>
                     ))}

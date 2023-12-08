@@ -40,12 +40,12 @@ export const navLinks = [
         subMenu: [
             {
                 label: 'Kupuję',
-                path: '/nieruchomosci-kup',
+                path: '/nieruchomosci',
                 subMenu: []
             },
             {
                 label: 'Sprzedaje',
-                path: '/nieruchomosci-sprzedaj',
+                path: '/sprzedaj',
                 subMenu: []
             },
         ]
@@ -452,3 +452,24 @@ export const sectionText = {
         },
     ]
 }
+
+export const agents = [
+    {
+        name: 'Krystian Wiśniewki',
+        imagePath: human5,
+        amployee: 'Agent Nieruchomości',
+        description: "Doświadczony agent specjalizujący się w domach rodzinnych. Z pasją dba o znalezienie idealnego miejsca dla każdej rodziny, oferując swoje wieloletnie doświadczenie w branży."
+    },
+    {
+        name: "Joanna Zielińska",
+        imagePath: human6,
+        amployee: 'Agent Nieruchomości',
+        description: "Agentka zajmująca się nieruchomościami nad morzem. Jej obszar ekspertyzy to luksusowe apartamenty i wille z widokiem na plażę, oferujące wyjątkowe doznania."
+    },
+    {
+        name: "Krystian Nowak",
+        imagePath: human3,
+        amployee: 'Agent Nieruchomości',
+        description: "Specjalista od ekskluzywnych posiadłości i willi. Z ogromnym zaangażowaniem pomaga klientom w znalezieniu wymarzonej nieruchomości, zapewniając kompleksową obsługę."
+    }
+]
