@@ -16,6 +16,7 @@ import house15 from './house15.jpg'
 import room1 from './room1.jpg'
 import room2 from './room2.jpg'
 import bgPages from './bgPages.jpg'
+import planRooms from './planRooms.jpg'
 
 export {
     house1,
@@ -35,5 +36,6 @@ export {
     house15,
     room1,
     room2,
-    bgPages
+    bgPages,
+    planRooms
 }

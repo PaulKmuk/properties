@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom"
 import { Navigate, Footer } from "./components"
-import { Home, AboutAs, Contact, Offer, PropertiesBuy } from "./pages"
+import { Home, AboutAs, Contact, Offer, PropertiesBuy, Property } from "./pages"
 
 
 function App() {
@@ -11,6 +11,7 @@ return (
          <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/nieruchomosci" element={<PropertiesBuy />}/>
+            <Route path="/nieruchomosci/:id" element={<Property />}/>
             <Route path="/oferta" element={<Offer />}/>
             <Route path="/o-nas" element={<AboutAs />}/>
             <Route path="/kontakt" element={<Contact />}/>

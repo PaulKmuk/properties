@@ -21,7 +21,8 @@ import {
     house14, 
     house15,
     room1,
-    room2
+    room2,
+    planRooms
 } from "../assets/houses"
 
 export const navLinks = [
@@ -85,12 +86,12 @@ export const properties = [
         layout: {
             bathroom: 1,
             room: 4,
-            garage: true,
+            garage: false,
         },
         type: 'Dom',
         typeOffer: 'Sprzedaż',
         pathImg: house1,
-        images: [ house1, room1, room2 ]
+        images: [ house1, room1, room2, planRooms ]
     },
     {
         id: 2,
@@ -108,7 +109,7 @@ export const properties = [
         type: 'Dom',
         typeOffer: 'Sprzedaż',
         pathImg: house2,
-        images: [ house2, room1, room2 ]
+        images: [ house2, room1, room2, planRooms ]
     },
     {
         id: 3,
@@ -126,7 +127,7 @@ export const properties = [
         type: 'Dom',
         typeOffer: 'Sprzedaż',
         pathImg: house3,
-        images: [ house3, room1, room2 ]
+        images: [ house3, room1, room2, planRooms ]
     },
     {
         id: 4,
@@ -144,7 +145,7 @@ export const properties = [
         type: 'Dom',
         typeOffer: 'Sprzedaż',
         pathImg: house4,
-        images: [ house4, room1, room2 ]
+        images: [ house4, room1, room2, planRooms ]
     },
     {
         id: 5,
@@ -162,7 +163,7 @@ export const properties = [
         type: 'Dom',
         typeOffer: 'Sprzedaż',
         pathImg: house5,
-        images: [ house5, room1, room2 ]
+        images: [ house5, room1, room2, planRooms ]
     },
     {
         id: 6,
@@ -180,7 +181,7 @@ export const properties = [
         type: 'Dom',
         typeOffer: 'Sprzedaż',
         pathImg: house6,
-        images: [ house6, room1, room2 ]
+        images: [ house6, room1, room2, planRooms ]
     },
     {
         id: 7,
@@ -198,7 +199,7 @@ export const properties = [
         type: 'Dom',
         typeOffer: 'Sprzedaż',
         pathImg: house7,
-        images: [ house7, room1, room2 ]
+        images: [ house7, room1, room2, planRooms ]
     },
     {
         id: 8,
@@ -216,7 +217,7 @@ export const properties = [
         type: 'Dom',
         typeOffer: 'Sprzedaż',
         pathImg: house8,
-        images: [ house8, room1, room2 ]
+        images: [ house8, room1, room2, planRooms ]
     },
     {
         id: 9,
@@ -234,7 +235,7 @@ export const properties = [
         type: 'Dom',
         typeOffer: 'Sprzedaż',
         pathImg: house9,
-        images: [ house9, room1, room2 ]
+        images: [ house9, room1, room2, planRooms ]
     },
     {
         id: 10,
@@ -252,7 +253,7 @@ export const properties = [
         type: 'Dom',
         typeOffer: 'Sprzedaż',
         pathImg: house10,
-        images: [ house10, room1, room2 ]
+        images: [ house10, room1, room2, planRooms ]
     },
     {
         id: 11,
@@ -270,7 +271,7 @@ export const properties = [
         type: 'Dom',
         typeOffer: 'Sprzedaż',
         pathImg: house11,
-        images: [ house11, room1, room2 ]
+        images: [ house11, room1, room2, planRooms ]
     },
     {
         id: 12,
@@ -288,7 +289,7 @@ export const properties = [
         type: 'Dom',
         typeOffer: 'Sprzedaż',
         pathImg: house12,
-        images: [ house12, room1, room2 ]
+        images: [ house12, room1, room2, planRooms ]
     },
     {
         id: 13,
@@ -306,7 +307,7 @@ export const properties = [
         type: 'Dom',
         typeOffer: 'Sprzedaż',
         pathImg: house13,
-        images: [ house13, room1, room2 ]
+        images: [ house13, room1, room2, planRooms ]
     },
     {
         id: 14,
@@ -324,7 +325,7 @@ export const properties = [
         type: 'Dom',
         typeOffer: 'Sprzedaż',
         pathImg: house14,
-        images: [ house14, room1, room2 ]
+        images: [ house14, room1, room2, planRooms ]
     },
     {
         id: 15,
@@ -342,7 +343,7 @@ export const properties = [
         type: 'Dom',
         typeOffer: 'Sprzedaż',
         pathImg: house15,
-        images: [ house15, room1, room2 ]
+        images: [ house15, room1, room2, planRooms ]
     },
 ]
 
@@ -458,18 +459,53 @@ export const agents = [
         name: 'Krystian Wiśniewki',
         imagePath: human5,
         amployee: 'Agent Nieruchomości',
+        number: '123-123-123',
+        mail: 'wisniewksi@gmail.com',
         description: "Doświadczony agent specjalizujący się w domach rodzinnych. Z pasją dba o znalezienie idealnego miejsca dla każdej rodziny, oferując swoje wieloletnie doświadczenie w branży."
     },
     {
         name: "Joanna Zielińska",
         imagePath: human6,
         amployee: 'Agent Nieruchomości',
+        number: '123-123-123',
+        mail: 'zielinska@gmail.com',
         description: "Agentka zajmująca się nieruchomościami nad morzem. Jej obszar ekspertyzy to luksusowe apartamenty i wille z widokiem na plażę, oferujące wyjątkowe doznania."
     },
     {
         name: "Krystian Nowak",
         imagePath: human3,
         amployee: 'Agent Nieruchomości',
+        number: '123-123-123',
+        mail: 'nowak@gmail.com',
         description: "Specjalista od ekskluzywnych posiadłości i willi. Z ogromnym zaangażowaniem pomaga klientom w znalezieniu wymarzonej nieruchomości, zapewniając kompleksową obsługę."
     }
 ]
+
+export const exampleDescriptioHouse = {
+    descriprion: 'Do sprzedania wyjątkowy, piękny dom wolnostojący na działce 2000m2. Bardzo atrakcyjna lokalizacja dla osób, które poszukują nieruchomości w cichej i spokojnej okolicy z jednoczesnym szybkim dojazdem do centrum miasta. Do centrum Wrocławia dojazd w 30 min, do Oleśnicy 10 min, do drogi ekspresowej S8 - 7 min. Dom jest wyposażony w pompę ciepła, panele fotowoltaiczne oraz ogrzewanie podłogowe. Dodatkowe ocieplenie (styropian 15 cm) sprawia, że dom jest w pełni energooszczędny.',
+    groundFloor: [
+        'salon z kominkiem i jadalnią: 34,9m2',
+        'kuchnia 10,3m2; otwarta na salon,',
+        'spiżarnia 3,4m2 do której wchodzi się przez zabudowę kuchenną a że spiżarni do garażu,',
+        'przedsionek 5m2 z szafą w zabudowie,',
+        'dwie łazienki z toaletą (6,2m2 i 2,8m2),',
+        '4 pokoje w tym jeden z bezpośrednim wejściem do ogrodu oraz garderobą i pralnią (powierzchnie pokoi: 12,6m2 , 13,10m2, 12,3m2, 15,4m2),',
+        'garaż 32,3 m2, dwustanowiskowy, ogrzewany, w bryle budynku z automatyczną bramą wjazdową (dwa dodatkowe miejsca postojowe przed wyjazdem do garażu).',
+        'pomieszczenie gospodarcze 6m2 (znajdę się tu sprzęt do sterowania ciepłem).',
+    ],
+    firstFloor: [
+        'łazienkę z sauną,',
+        'bilard, solarium,',
+        'przestrzeń kuchenną,',
+        'miejsce na kino domowe,',
+        'ukrytą przestrzeń do przechowywania.',
+    ],
+    garden: [
+        'duży taras (21,3m2) z meblami ogrodowymi,',
+        'murowany grill z wędzarnią i piecem,',
+        'zagospodarowany (trawnik i drzewka),',
+        'studnia głębinowa do podlewania ogrodu,',
+        'balia do domowego morsowania,',
+        'panele fotowoltaiczne',
+    ],
+}

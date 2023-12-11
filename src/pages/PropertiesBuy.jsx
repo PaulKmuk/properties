@@ -5,6 +5,7 @@ import { FaBath, FaBed, FaRulerCombined } from "react-icons/fa";
 import { MdGarage } from "react-icons/md";
 import { Button } from '../components'
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { useNavigate } from 'react-router-dom';
 
 const PropertiesBuy = () => {
 
@@ -12,6 +13,7 @@ const PropertiesBuy = () => {
     const [selectedOptionArea, setSelectedOptionArea] = useState(0);
     const [propertiesList, setPropertiesList] = useState(properties)
     const [openFilter, setOpenFilter] = useState(false)
+    const navigate = useNavigate()
 
     const classIconLayout = 'flex items-center gap-2 text-sm md:text-md'
 
@@ -184,7 +186,7 @@ const PropertiesBuy = () => {
                                 </div>
                             ))}
                         </div>
-                        <Button label='Filtruj' className='md:text-sm md:py-2' click={() => handleFilter()}/>
+                        <Button label='Filtruj' className='md:text-xs md:py-2' click={() => handleFilter()}/>
                     </div>
                 </div>
 
@@ -208,7 +210,7 @@ const PropertiesBuy = () => {
                                         <p className={classIconLayout}><FaRulerCombined className='text-sm md:text-xl'/> {el.area} m<sup>2</sup></p>
                                     </div>
                                     <div className='flex justify-end pt-6'>
-                                        <Button label='Zobacz' className='md:py-2 md:px-3 md:text-sm'/>
+                                        <Button click={() => navigate(`/nieruchomosci/${el.id}`)} label='Zobacz' className='md:py-2 md:px-3 md:text-sm'/>
                                     </div>
                                 </div>
                             </div>

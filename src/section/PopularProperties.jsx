@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaBath, FaBed, FaRulerCombined } from "react-icons/fa";
 import { MdGarage } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
 
 const SampleNextArrow = (props) => {
     const { style, onClick } = props;
@@ -36,6 +37,7 @@ const SamplePrevArrow = (props) => {
 const PopularProperties = () => {
 
     const popularProperties = properties.slice(0, 6)
+    const navigate = useNavigate()
 
     const settings = {
         dots: true,
@@ -98,7 +100,7 @@ const PopularProperties = () => {
                                         <p className={classIconLayout}><FaRulerCombined className='text-sm md:text-xl'/> {el.area} m<sup>2</sup></p>
                                     </div>
                                     <div className='flex justify-end pt-6'>
-                                        <Button label='Zobacz' className='md:!py-1 md:!px-3 md:!text-sm'/>
+                                        <Button click={() => navigate(`/nieruchomosci/${el.id}`)} label='Zobacz' className='md:!py-1 md:!px-3 md:!text-sm'/>
                                     </div>
                                 </div>
                             </div>
